@@ -8,26 +8,14 @@
 
 module load r
 
-WD=/N/dc2/scratch/rtraborn/T502_RNAseq
+WD=/<please enter the full path to scripts/>
+#WD=/N/dc2/scratch/rtraborn/T502_RNAseq/scripts
 
 cd $WD
 
-echo "Making symbolic links to bam files"
-
-mkdir seudDir
-cd seudDir
-
-#ln -s ##### add symbolic links to bams
-
-mkdir NHR40DIR
-cd NHR40DIR
-#ln -s ##### add symbolic links to bams
-
-cd ../scripts
-
 echo "Launching DE expression job"
 
-R CMD BATCH de_analysis_neuron_mm10.R
+R CMD BATCH de_analysis_Prist_hybrid2.R
 
 echo "Done."
 
